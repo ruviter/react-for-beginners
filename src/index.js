@@ -6,7 +6,7 @@ import Movie from './routes/movie';
 
 const root = createRoot(document.querySelector('#root'));
 root.render(
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
             <Route path='/' element={<App />} />
             <Route path=':movieId' element={<Movie />} />
